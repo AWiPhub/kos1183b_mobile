@@ -27,11 +27,20 @@
         <ScrollView orientation="horizontal" style="margin-top: 40px">
           <FlexboxLayout>
             <Button
-              class="kp"
+              style="font-size: 14px"
               text="Калькулятор"
               @tap="goToDetailPage('calc')"
             />
-            <Button class="kp" text="Погода" @tap="goToDetailPage('weather')" />
+            <Button
+              style="font-size: 14px"
+              text="Погода"
+              @tap="goToDetailPage('weather')"
+            />
+            <Button
+              style="font-size: 14px"
+              text="Конвертер"
+              @tap="goToDetailPage('converter')"
+            />
           </FlexboxLayout>
         </ScrollView>
       </FlexboxLayout>
@@ -42,6 +51,7 @@
 <script>
 import Calc from "./Calc.vue";
 import Weather from "./Weather.vue";
+import Converter from "./Converter.vue";
 
 export default {
   data() {
@@ -55,6 +65,9 @@ export default {
           break;
         case "weather":
           this.$navigateTo(Weather);
+          break;
+        case "converter":
+          this.$navigateTo(Converter);
           break;
       }
     },

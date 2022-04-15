@@ -180,7 +180,7 @@ export default {
 };
 </script>
 
-<style scoped>
+<style>
 .layout {
   padding-top: 250px;
   display: flex;
