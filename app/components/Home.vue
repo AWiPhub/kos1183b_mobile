@@ -41,6 +41,11 @@
               text="Конвертер"
               @tap="goToDetailPage('converter')"
             />
+            <Button
+              style="font-size: 14px"
+              text="Календарь"
+              @tap="goToDetailPage('calendar')"
+            />
           </FlexboxLayout>
         </ScrollView>
       </FlexboxLayout>
@@ -52,6 +57,7 @@
 import Calc from "./Calc.vue";
 import Weather from "./Weather.vue";
 import Converter from "./Converter.vue";
+import Calendar from "./Calendar.vue";
 
 export default {
   data() {
@@ -68,6 +74,9 @@ export default {
           break;
         case "converter":
           this.$navigateTo(Converter);
+          break;
+        case "calendar":
+          this.$navigateTo(Calendar);
           break;
       }
     },
